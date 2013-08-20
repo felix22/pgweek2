@@ -1,0 +1,159 @@
+.header{
+	min-height: 120px;
+	background-color: #58488a;
+	margin: 0;
+	padding: 0;
+
+
+}
+
+.heading{
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+pre{
+	border-radius: 5px;
+}
+.logo{
+	float: left;
+
+	color: #ecf0f1;
+}
+.logo h1{
+	display: inline;
+	font-family: arial;
+	color: white;
+	font-size: 350%;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.logo p{
+	display: inline;
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 22px;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+
+}
+
+.container{
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sidebar{
+	max-width: 248px;
+	float: right;
+}
+
+.main-body{
+	max-width: 980px;
+	margin: 0 auto;
+	padding-right: 280px;
+}
+
+
+.nav{
+	float: right;
+}
+.sd{
+	max-width: 248px;
+	margin-top: 30px;
+	float: right;
+}
+
+.center{
+	text-align: center;
+
+}
+
+.center-div{
+	margin: 0 auto;
+}
+
+
+
+/*___________________navbar______________________________*/
+
+.login{
+	padding-top: 7px;
+	float: right;
+	margin-top: 13px;
+}
+.login ul {list-style-type: none; }
+.login li {display: inline;}
+
+.login a {
+	padding: 6px 20px;
+	color: #fff;
+	border: solid 1px #fff;
+
+	border-radius: 4px;
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-weight: 400;
+	}
+
+.login a:hover{
+	background-color: #fff;
+		border: solid 1px #fff ;
+		color: #58488a;
+
+}
+
+.login a:active{
+	background-color: #fff;
+		border: solid 1px #fff ;
+		color: #58488a;
+}
+
+
+
+
+.navv{
+	width: 980px;
+	margin: 0 auto;
+	clear: both;
+	display: block;
+	padding: 0 10px;
+}
+
+.navv h3 {
+	float: left;
+	padding-bottom: 0;
+	padding-top: 12px;
+}
+.nav2 {
+	float: right;
+	padding-top: 25px;
+	padding-bottom: 0;
+
+}
+
+.nav2 dl{
+	padding-bottom: 0;
+}
+
+
+
+
+/*____________floats___________________*/
+
+.floatleft{
+	float: left;
+}
+.floatright{
+	float: right;
+}
+
+
+h1{
+	font-size: 3em;
+	font-weight: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

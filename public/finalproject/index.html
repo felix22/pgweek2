@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Student portal</title>
+
+  
+  <link rel="stylesheet" href="../css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="../css/custom.css">
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+<div class="header" >
+<div class="heading" >
+
+  <div class="logo" ><h1>Path Guide</h1><p> Student Portal</p></div>
+  <div class="login">
+          <ul>
+              <!--<li><a class="whitered" href="#work">Sign Out</a></li>-->
+          </ul>
+          </div>
+
+</div>
+</div>
+
+<div class="navv" >
+    <h3>Week 1</h3>
+  <div class="nav2">  <dl class="sub-nav">
+  <dt></dt>
+  <dd class="active"><a href="#">Week 1</a></dd>
+  <dd class=""><a href="#">Week 2 (Coming Soon)</a></dd>
+
+</dl></div>
+<hr />
+<ul class="breadcrumbs">
+  <li ><a  href="/">Introduction</a></li>
+  <li ><a  href="/lesson1">Lesson 1</a></li>
+  <li  ><a href="/lesson2">Lesson 2</a></li>
+  <li  ><a href="/lesson3">Lesson 3</a></li>
+  <li  > <a href="/lesson4">Lesson 4</a></li>
+  <li class="current" ><a href="/finalproject">Final Project</a></li>
+</ul>
+
+</div>
+
+<div class="container">
+
+  
+    
+  
+  <div class="main-body">
+    <h2 class="">Week1 - Final Project</h2>
+    <br/>
+      <h5 class="">Introduction</h5>
+      <p>Today, we're going to create the page below,  including the contact form and deploy it to Heroku with rack and git next week so its available online.</p>
+      <img src="../img/5t.png">
+      <br /><br /><br />
+
+      <p>I have already setup the document structure for you and even added a title tag, so all you need to do is open your index.html and custom.css file in sublime text and start styling.</p>
+      <p>Dowlnload It Here: <a href="https://www.dropbox.com/s/5vbxso789wzmli6/docstructure.zip">DOWNLOAD</a></p>
+                <br /><br /><br />
+
+       <h3 class="">Lets Get started:</h3>
+      <h5>Step 1 – Background Color</h5>
+      <p>We'll change the background color of the entire page from white (the default background color) to light grey by styling the “BODY” in our custom.css file.</p>
+      <p>To do this, Open the custom.css file and create a body selector like so:</p>
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+         <span style="color:#cda869">body</span>{
+
+         }
+        </pre>
+      </p>
+      <p>In the body selector, create a background color property and add a value of #e7e7e7 like so:</p>
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#cda869">body</span>{
+
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#e7e7e7</span>;
+
+        }
+        </pre>
+      </p>
+      
+      <p>This will change the background color of the document from white to light grey.</p>
+
+
+      <br /><br /><br />
+      <h5>Step 2 – Add the top bar.</h5>
+      <p>To add the little bar at the top of the page, we'll add a DIV into the body element and give it a class of  “heading” so we can style it in the CSS later.</p>
+      <p>
+
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">body</span>></span>
+
+           <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=“<span style="color:#89bdff">heading</span>”  >&lt;/<span style="color:#89bdff">div</span>></span>
+
+        <span style="color:#89bdff">&lt;/<span style="color:#89bdff">body</span>></span>
+        </pre>
+      </p>
+      <p>Why are we adding a div? A div is a block level element so if you don't give the div a width in css, it will expand to the width of  its parent container, or the view port. In this case, the div is not in any parent container, so it will expand to the width of the view port.</p>
+      <p>In the custom.css file, we'll create a class selector for “heading” so that we can add a background color to the div.</p>
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.heading</span>{
+
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#2e3639;</span>
+        }
+        </pre>
+      </p>
+      <p>If save the page and open it in your browser right now, you'll see that the the page looks exactly like it was before. The div we just added and styled seems to be missing.</p>
+      <p>This is because when you add a div into a page and the div has no content it collapses to a height of  0px, so it will appear invincible in the page.</p>
+      <p>There are two ways to get around this. You could specify a height for the div in the css but its always bad practice to specify heights for containers because for example in the future, if you decide to add some content and convert that tiny header to a nav bar, your page will break because the div wont be able to expand to fit the content.</p>
+      <p>What we'll do instead is add some padding to the bottom of the container like so:</p>
+      <p>
+      <pre style="background:#000;color:#f8f8f8">
+      
+      <span style="color:#9b703f">.heading</span>{
+
+        <span style="color:#c5af75">padding-bottom</span>: <span style="color:#dd7b3b">8<span style="color:#e28964">px</span></span>;
+        <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#2e3639</span>;
+      }
+      </pre>
+      </p>
+      <p>If you look at the page again, you'll see that there is some padding on the top and on the sides of the page. This is part of the default css styles that the browser adds to every web page.</p>
+      <p>You can remove this by setting the paddings and margins on the body selector to zero in css like so:</p>
+      <p>
+      <pre style="background:#000;color:#f8f8f8">
+
+       <span style="color:#cda869">body</span>{
+         <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#e7e7e7</span>;
+         <span style="color:#c5af75">padding</span> 0;
+         <span style="color:#c5af75">margin</span> 0;
+        }
+        </pre>
+        </p>
+
+      <br /><br /><br />
+      <h5>Step 3 – The Body</h5>
+      <br /> <br />
+      <p><strong>HTML</strong></p>
+      <p>Next, we'll add the white box that contains all the content of the landing page by adding another  div to the page and giving it a class of container.</p>
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+          
+          <span style="color:#89bdff">&lt;<span style="color:#89bdff">body</span>></span>
+
+            <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"heading"</span> >&lt;/<span style="color:#89bdff">div</span>></span>
+            <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"container"</span> >&lt;/<span style="color:#89bdff">div</span>></span>
+
+          <span style="color:#89bdff">&lt;/<span style="color:#89bdff">body</span>></span>
+        </pre>
+      </p>
+      <br /> <br />
+      <p><strong>CSS</strong></p>
+      <p>Again, we'll create a .container selector in the css file and add our styling to it. We'll give the container a background color of white(#fff) and a light grey(#ddd) 1px border to outline the container properly.</p>
+
+      <p>Also, we want the container to have a visible width of 750px and the content area to have a width of 580px. </p>
+
+      <p>If you remember the “css box model”,  you'll remember that when we set a width of a box element, you are setting the width of the content area only and the paddings and borders are added to that. </p>
+
+      <p>So to have a visible width of 750px for the container, we need to add padding of 85px to each side off the div which is set to 580px, to give a total of 750px.</p>
+
+      <p>If you have been listening, you'll realise that the total is actually 752 because of the borders we added on each side, so we'll account for the border by setting the width of the container to 578px instead of 580px to give us a total of 750px.</p>
+
+      <p>
+    <pre style="background:#000;color:#f8f8f8">
+
+      <span style="color:#9b703f">.container</span>{
+          
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#fff</span>;
+          <span style="color:#c5af75">border</span>: <span style="color:#dd7b3b">1<span style="color:#e28964">px</span></span> <span style="color:#f9ee98">solid</span> <span style="color:#dd7b3b">#ddd</span>;
+          <span style="color:#c5af75">width</span>: <span style="color:#dd7b3b">578<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding-left</span>: <span style="color:#dd7b3b">85<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding-right</span>: <span style="color:#dd7b3b">85<span style="color:#e28964">px</span></span>;
+
+      }
+
+      </pre>
+      </p>
+
+      <p>Now if you save the files and open the page in your browser you wont be able to see the container div, because it has no content so its height collapses to zero. We'll add some content in the next step.</p>
+
+
+      <br /><br /><br />
+      <h5>Step 4 – Content</h5>
+
+      <p>The only difference between the headings in the page and the paragraph text is that the headings are bolded, so we are going to use a P tag for each paragraph, a STRONG tag to make the headings bold and Ul's and Li's for the bullet points under “how it works”.</p>
+
+      <p>All the content will go inside the container div that we just created:</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+    <span style="color:#89bdff">&lt;<span style="color:#89bdff">body</span>></span>
+      <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"heading"</span> >&lt;/<span style="color:#89bdff">div</span>></span>
+      <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"container"</span> ></span>
+        
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span><span style="color:#e0c589">&lt;<span style="color:#e0c589">strong</span>></span>Get Things Done on-time... Everyday!<span style="color:#e0c589">&lt;/<span style="color:#e0c589">strong</span>></span><span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span>5Things helps you get things done by limiting your to-do list to 5 items, so you're forced to focus only on the most important things.<span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span><span style="color:#e0c589">&lt;<span style="color:#e0c589">strong</span>></span>How It Works:<span style="color:#e0c589">&lt;/<span style="color:#e0c589">strong</span>></span><span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span>
+          <span style="color:#89bdff">&lt;<span style="color:#89bdff">ul</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">li</span>></span>Add the 5 most-important things you need to do to 5Things<span style="color:#e0c589">&lt;/<span style="color:#e0c589">li</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">li</span>></span>Start with #1 and<span style="color:#e0c589">&lt;/<span style="color:#e0c589">li</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">li</span>></span>Don't stop until you're done (except for breaks)<span style="color:#e0c589">&lt;/<span style="color:#e0c589">li</span>></span>
+            
+          <span style="color:#89bdff">&lt;/<span style="color:#89bdff">ul</span>></span>
+        <span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span><span style="color:#e0c589">&lt;<span style="color:#e0c589">strong</span>></span>Do this and you'll never have an unproductive day again.
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">strong</span>></span><span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span>We're making 5Things available FREE to a small list of early adopters. If you'll like to be on that list, enter you email address below to get early access and start using 5Things to improve your productivity<span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+
+      <span style="color:#89bdff">&lt;/<span style="color:#89bdff">div</span>></span>
+
+    <span style="color:#89bdff">&lt;/<span style="color:#89bdff">body</span>></span>
+
+    </pre>
+      </p>
+
+
+      <br /><br /><br />
+      <h5>Step 5 – Styling The Body</h5>
+
+      <p>The content is in the page but it still looks very different from what we had in mind because it still has the default browser css applied to it... because we haven't told the browser how we want it to be displayed.</p>
+      
+      <p>First of all, we'll change the font family and font size and ad a line height of 1.4 times the font-size, to make it a little more readable.</p>
+
+      <p>Finally, we'll add more padding at the bottom of each paragraph, to space out the text properly and make it easy to read.</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+      <span style="color:#9b703f">.container</span> <span style="color:#cda869">p</span> {
+    
+        <span style="color:#c5af75">font-family</span>: <span style="color:#cf6a4c">georgia</span>, <span style="color:#65b042">"courier new"</span>, <span style="color:#cf6a4c">courier</span>, <span style="color:#cf6a4c">monospace</span>, <span style="color:#65b042">'Open Sans'</span>, 
+        <span style="color:#cf6a4c">sans-serif</span>;
+        <span style="color:#c5af75">font-size</span>: <span style="color:#dd7b3b">17<span style="color:#e28964">px</span></span>;
+        <span style="color:#c5af75">line-height</span>: <span style="color:#dd7b3b">1.4<span style="color:#e28964">em</span></span>;
+        <span style="color:#c5af75">padding-bottom</span>: <span style="color:#dd7b3b">12<span style="color:#e28964">px</span></span>;
+
+        }
+        </pre>
+      </p>
+
+      <p>The font I want to use is Georgia, but its good practice to always specify “fallback” fonts in case the browser for some reason cannot load your specified fonts.</p>
+
+      <p>We also need to apply the same styling to the LI tag, so the text inside the LI tags look the same as the text inside the P tags</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.container</span> <span style="color:#cda869">li</span> {
+
+          <span style="color:#c5af75">font-family</span>: <span style="color:#cf6a4c">georgia</span>, <span style="color:#65b042">"courier new"</span>, <span style="color:#cf6a4c">courier</span>, <span style="color:#cf6a4c">monospace</span>, <span style="color:#65b042">'Open Sans'</span>,
+           <span style="color:#cf6a4c">sans-serif</span>;
+          <span style="color:#c5af75">font-size</span>: <span style="color:#dd7b3b">16<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">line-height</span>: <span style="color:#dd7b3b">1.4<span style="color:#e28964">em</span></span>;
+
+
+          }
+          </pre>
+      </p>
+
+      <p>Also, in the name of readability, we'll change the font color from black to dark grey to reduce the extreme black on white contrast; making it easy on the eye.</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#cda869">body</span>{
+
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#e7e7e7</span>;
+          <span style="color:#c5af75">padding</span>: <span style="color:#dd7b3b">0</span>;
+          <span style="color:#c5af75">margin</span>: <span style="color:#dd7b3b">0</span>;
+          <span style="color:#c5af75">color</span>: <span style="color:#dd7b3b">#222222</span>;
+
+          }
+          </pre>
+      </p>
+
+      <br /><br /><br />
+      <h5>Step 6 - Center the container</h5>
+      <p>To center the main content container we must set the margin on the container to be equal on both sides. The only way to do this is to set margin right and margin left to “auto”, so that regardless of the screen size, the browser will set the margins to be equal on both sides; centering the div like so:</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.container</span>{
+
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#fff</span>;
+          <span style="color:#c5af75">border</span>: <span style="color:#dd7b3b">1<span style="color:#e28964">px</span></span> <span style="color:#f9ee98">solid</span> <span style="color:#dd7b3b">#ddd</span>;
+          <span style="color:#c5af75">width</span>: <span style="color:#dd7b3b">580<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding-left</span>: <span style="color:#dd7b3b">85<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding-right</span>: <span style="color:#dd7b3b">85<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">margin-right</span>: <span style="color:#f9ee98">auto</span>;
+          <span style="color:#c5af75">margin-left</span>: <span style="color:#f9ee98">auto</span>;
+
+          }
+          </pre>
+      </p>
+
+      <p>You can also use the css short hand form (margin: 0 auto;) which will set the top and bottom margins to 0, then left and right to auto.</p>
+
+      <p>I want the bottom of the page to have a margin of 40px, so I'll use (margin: 0 auto 40px) which sets the top to 0, left and right to auto and bottom to 40px.</p>
+
+            <br /><br /><br />
+      <h5>Step 7 – Logo and More Margins.</h5>
+
+      <p>As you can see, the content container is attached to the top bar. We can space it out by adding some margin to the top bar.</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.heading</span>{
+
+          <span style="color:#c5af75">padding-bottom</span>: <span style="color:#dd7b3b">8<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#2e3639</span>;
+          <span style="color:#c5af75">margin-bottom</span>: <span style="color:#dd7b3b">30<span style="color:#e28964">px</span></span>;
+
+          }
+          </pre>
+      </p>
+      
+      <p>We'll also add the logo to the top of the content container with an <strong>img</strong> tag</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">body</span>></span>
+
+          <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"heading"</span> >&lt;/<span style="color:#89bdff">div</span>></span>
+          <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"container"</span> ></span>
+
+
+          <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=“<span style="color:#89bdff">logo</span>”></span><span style="color:#e0c589">&lt;<span style="color:#e0c589">img</span> <span style="color:#e0c589">src</span>=<span style="color:#65b042">"img/lg5.png"</span>></span><span style="color:#89bdff">&lt;/<span style="color:#89bdff">div</span>></span>
+          .
+          .
+          .
+        <span style="color:#89bdff">&lt;/<span style="color:#89bdff">body</span>></span>
+        </pre>
+      </p>
+
+      <p>We added a class “logo” so we can add some padding to space it out a little bit, and then align the image right.</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.logo</span>{
+
+          <span style="color:#c5af75">padding-top</span>: <span style="color:#dd7b3b">30<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding-bottom</span>: <span style="color:#dd7b3b">10<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">text-align</span>: <span style="color:#f9ee98">right</span>;
+
+          }
+
+          </pre>
+      </p>
+
+       <br /><br /><br />
+      <h5>Step 8 – The Box</h5>
+
+      <p>First we add a div with a class of box into the html under the last P tag. In the div, there will also be bold paragraph with the text “Get Early Access”</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">body</span>></span>
+
+          .
+          .
+          .
+
+           <span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"box"</span> ></span><span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span><span style="color:#e0c589">&lt;<span style="color:#e0c589">strong</span>></span>Get Early Access:<span style="color:#e0c589">&lt;/<span style="color:#e0c589">strong</span>></span><span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span><span style="color:#89bdff">&lt;/<span style="color:#89bdff">div</span>></span>
+          .
+          .
+          <span style="color:#89bdff">&lt;/<span style="color:#89bdff">body</span>></span>
+          </pre>
+      </p>
+
+      <p>In the css file, we set the background color, font color, width,  padding and center it with margin 0 auto like so:</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.box</span>{
+
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#2e3639</span>;
+          <span style="color:#c5af75">color</span>: <span style="color:#dd7b3b">#fff</span>;
+          <span style="color:#c5af75">width</span>: <span style="color:#dd7b3b">460<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">border</span>: <span style="color:#f9ee98">none</span>;
+          <span style="color:#c5af75">padding</span>: <span style="color:#dd7b3b">20<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">margin</span>: <span style="color:#dd7b3b">0</span> <span style="color:#f9ee98">auto</span> <span style="color:#dd7b3b">30<span style="color:#e28964">px</span></span>;
+          }
+
+          </pre>
+      </p>
+      <p>and in the P tag, we set the font families, text position, text size and remove the 12px padding we added to all the P tags in the content container earlier.</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.box</span> <span style="color:#cda869">p</span>{
+
+          <span style="color:#c5af75">font-family</span>: <span style="color:#cf6a4c">Arial</span>, <span style="color:#cf6a4c">Helvetica</span>, <span style="color:#cf6a4c">Sans-Serif</span>;
+          <span style="color:#c5af75">text-align</span>: <span style="color:#f9ee98">center</span>;
+          <span style="color:#c5af75">font-size</span>: <span style="color:#dd7b3b">16<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding-bottom</span>: <span style="color:#dd7b3b">0<span style="color:#e28964">px</span></span>;
+
+          }
+          </pre>
+      </p>
+
+
+      <br /><br /><br />
+      <h5>Step 9 – The Form</h5>
+      <p> In the box div, under the "Get Early Access" P tag, we add an input box and a submit button and the appropriate attributes to make them behave properly.</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#89bdff">&lt;<span style="color:#89bdff">form</span>  <span style="color:#89bdff">action</span>=<span style="color:#65b042">""</span> <span style="color:#89bdff">method</span>=<span style="color:#65b042">"post"</span>></span>
+              <span style="color:#e0c589">&lt;<span style="color:#e0c589">input</span> <span style="color:#e0c589">type</span>=<span style="color:#65b042">"email"</span> <span style="color:#e0c589">placeholder</span>=<span style="color:#65b042">"Enter Your Email Address Here"</span> /></span>
+              <span style="color:#e0c589">&lt;<span style="color:#e0c589">button</span> <span style="color:#e0c589">type</span>=<span style="color:#65b042">"submit"</span> ></span>Get Invited<span style="color:#e0c589">&lt;/<span style="color:#e0c589">button</span>></span>
+
+            <span style="color:#89bdff">&lt;/<span style="color:#89bdff">form</span>></span>
+
+      </pre>
+      </p>
+
+      <br /><br /><br />
+      <h5>Step 10 – Styling The Form</h5>
+      <p>The input elements are inline elements by default, so they'll sit beside each other initially. You can stack them on top of each other by changing the display property to “block”.</p>
+
+      <p>We'll also set the width to 100% so it will take the full size of the box, change the text color of the input box to dark grey and then we'll remove all the borders, add some padding so the text inside the box can breath, a margin to the bottom to push the button down a little bit and specify the fonts and font sizes like so:</p>
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.box</span> <span style="color:#cda869">input</span>{
+          <span style="color:#c5af75">display</span>: <span style="color:#f9ee98">block</span>;
+          <span style="color:#c5af75">width</span>: <span style="color:#dd7b3b">96<span style="color:#e28964">%</span></span>;
+          <span style="color:#c5af75">border</span>: <span style="color:#f9ee98">none</span>;
+          <span style="color:#c5af75">color</span>: <span style="color:#dd7b3b">#222222</span>;
+          <span style="color:#c5af75">padding</span>: <span style="color:#dd7b3b">2<span style="color:#e28964">%</span></span>;
+          <span style="color:#c5af75">margin-bottom</span>: <span style="color:#dd7b3b">10<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">font-size</span>: <span style="color:#dd7b3b">16<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">font-family</span>: <span style="color:#cf6a4c">georgia</span>, <span style="color:#65b042">"courier new"</span>, <span style="color:#cf6a4c">courier</span>, <span style="color:#cf6a4c">monospace</span>, <span style="color:#65b042">'Open Sans'</span>,
+           <span style="color:#cf6a4c">sans-serif</span>;
+          }
+        </pre>
+      </p>
+
+      <p>Notice that we set the width to 96% and padding around the text to 2%. This is because of the box model of css. The padding left and right will add  to the sides of the container, giving it an overall width of 104% if we had set the width to 100%.</p>
+
+      <p>Setting the width to 96% will give it a 100% width because of the 2% padding on each side.</p>
+
+      <p>Similarly, we'll style the button like so:</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.box</span> <span style="color:#cda869">button</span>{
+
+          <span style="color:#c5af75">width</span>: <span style="color:#dd7b3b">100<span style="color:#e28964">%</span></span>;
+          <span style="color:#c5af75">font-size</span>: <span style="color:#dd7b3b">16<span style="color:#e28964">px</span></span>;
+          <span style="color:#c5af75">padding</span>: <span style="color:#dd7b3b">2<span style="color:#e28964">%</span></span>;
+          <span style="color:#c5af75">display</span>: <span style="color:#f9ee98">block</span>;
+          <span style="color:#c5af75">margin</span>: <span style="color:#dd7b3b">0</span> <span style="color:#f9ee98">auto</span>;
+          <span style="color:#c5af75">font-family</span>: <span style="color:#cf6a4c">georgia</span>, <span style="color:#65b042">"courier new"</span>, <span style="color:#cf6a4c">courier</span>, <span style="color:#cf6a4c">monospace</span>, <span style="color:#65b042">'Open Sans'</span>, 
+          <span style="color:#cf6a4c">sans-serif</span>;
+          <span style="color:#c5af75">font-weight</span>: <span style="color:#f9ee98">bold</span>;
+          <span style="color:#c5af75">color</span>: <span style="color:#dd7b3b">#fff</span>;
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#5da423</span>;
+          <span style="color:#c5af75">border</span>: <span style="color:#f9ee98">none</span>;
+
+          }
+
+        </pre>
+      </p>
+
+      <p>Change the color of the button when you hover over it with your mouse:</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.box</span> <span style="color:#cda869">button</span><span style="color:#89bdff">:hover</span>{
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#457a1a</span>; 
+          }
+        </pre>
+      </p>
+
+      <p> and add a top border that will only show up when you click:</p>
+
+      <p>
+        <pre style="background:#000;color:#f8f8f8">
+
+        <span style="color:#9b703f">.box</span> <span style="color:#cda869">button</span><span style="color:#89bdff">:active</span>{
+          <span style="color:#c5af75">border-top</span>: <span style="color:#dd7b3b">2<span style="color:#e28964">px</span></span> <span style="color:#f9ee98">solid</span> <span style="color:#dd7b3b">#5da423</span>; 
+          <span style="color:#c5af75">background-color</span>: <span style="color:#dd7b3b">#457a1a</span>; 
+          }
+        </pre>
+      </p>
+
+      <p>Your page should now look like this one: <a href="http://pgproject1.herokuapp.com/">This One</a> you can inspect the code and compare it to your work. </p>
+
+      <p>When you finish building it, delete your files and try to re-build the page using only a screenshot of the final page, without looking at this tutorial.</p>
+
+  </div>
+
+
+  
+</div>
+
+
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+  <script src="js/foundation/foundation.orbit.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+  <script src="js/foundation/foundation.topbar.js"></script>
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  -->
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
